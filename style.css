@@ -1,0 +1,17 @@
+html,
+body,
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 62.5%; /*10px*/
+}
+.header {
+  font-size: 10rem;
+  text-align: center;
+  background-color: aqua;
+}
+.card {
+  border: 1px solid red;
+  font-size: 3rem;
+}
