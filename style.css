@@ -35,3 +35,16 @@ body {
   margin: 5%;
   height: 80%;
 }
+/*Button below*/
+.form-test::before {
+  content: "\2713";
+  font-size: 2rem;
+}
+.button-test {
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.button-test:hover {
+  transform: scale(1.5);
+}
+/*Button above*/
