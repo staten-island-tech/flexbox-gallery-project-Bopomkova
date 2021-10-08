@@ -43,6 +43,10 @@ body {
 .gallery .card:not(:hover) {
   transform: scale(0.9);
 }
+.gallery:hover .card:not(:hover) {
+  transform: scale(0.9);
+  opacity: 0.8;
+}
 /*Button below*/
 .form-test::before {
   content: "\2713";
@@ -52,17 +56,59 @@ body {
   font-size: 2rem;
   transition: all 0.3s ease-in-out;
 }
-.gallery .card:not(:hover) {
-  transform: scale(0.9);
-  opacity: 0.8;
-}
 .button-test:hover {
   transform: scale(1.5);
 }
-.image-test:hover {
-  outline: black 10px solid;
-}
-.image-test {
-  transition: all 0.3s ease-in-out;
-}
 /*Button above*/
+.animation {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  animation: test 4s infinite;
+}
+@keyframes test {
+  0% {
+    left: 50%;
+    bottom: 10%;
+    background-color: red;
+  }
+  25% {
+    left: 50%;
+    bottom: 20%;
+    background-color: blue;
+  }
+  50% {
+    left: 55%;
+    bottom: 20%;
+    background-color: green;
+  }
+  75% {
+    left: 55%;
+    bottom: 10%;
+    background-color: yellow;
+  }
+  100% {
+    left: 50%;
+    bottom: 10%;
+    background-color: purple;
+  }
+}
+.anim-pg-load {
+}
+#anim-pg-load-img {
+  display: flex;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: pg-load 4s 1;
+}
+@keyframes pg-load {
+  0% {
+    right: 0%;
+    bottom: 0%;
+  }
+  100% {
+    left: -100%;
+    top: -100%;
+  }
+}
