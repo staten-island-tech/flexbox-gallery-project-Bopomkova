@@ -15,6 +15,15 @@ body {
   text-align: center;
   background-color: rgb(0, 202, 202);
   box-shadow: 0px 10px 3px rgb(0, 112, 112);
+  animation: anim-header-pgload 0.75s 1;
+}
+@keyframes anim-header-pgload {
+  0% {
+    font-size: 5rem;
+  }
+  100% {
+    font-size: 10rem;
+  }
 }
 .gallery {
   display: flex;
@@ -38,55 +47,61 @@ body {
   margin: 5%;
   height: 80%;
 }
+
 .card:hover {
   transform: scale(1.1);
 }
-.gallery .card:not(:hover) {
-  transform: scale(0.9);
-}
 .gallery:hover .card:not(:hover) {
-  transform: scale(0.9);
   opacity: 0.8;
 }
-/*Button below*/
-.form-test::before {
-  content: "\2713";
-  font-size: 2rem;
-}
-.button-test {
-  font-size: 2rem;
-  transition: all 0.3s ease-in-out;
-}
-.button-test:hover {
-  transform: scale(1.5);
-}
-/*Button above*/
-.animation {
-  height: 2rem;
-  width: 2rem;
-  position: absolute;
-  animation: test 4s infinite;
-}
+
+/*Unique hovers*/
 #anim-card-apple:hover {
   background-color: rgb(255, 255, 255);
   transition: all 5s ease-in-out;
 }
+
 #anim-card-banana:hover {
-  animation: anim-card-banana 4s infinite;
+  animation: anim-card-banana 2.5s infinite;
 }
+
 @keyframes anim-card-banana {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 10px 10px 3px rgb(0, 112, 112);
+  }
+  25% {
+    transform: rotate(90deg);
+    box-shadow: 10px -10px 3px rgb(0, 112, 112);
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: -10px -10px 3px rgb(0, 112, 112);
+  }
+  75% {
+    transform: rotate(270deg);
+    box-shadow: -10px 10px 3px rgb(0, 112, 112);
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 10px 10px 3px rgb(0, 112, 112);
+  }
 }
+
 #anim-card-tomato:hover {
   box-shadow: -20px -20px 10px rgb(115, 23, 201);
 }
+
 #anim-card-blueberry:hover {
   width: 40%;
   color: blue;
   transition: all 3s ease-in-out;
 }
+
 #anim-card-kiwi:hover {
   animation: anim-card-kiwi 4s infinite;
 }
+
 @keyframes anim-card-kiwi {
   0% {
     box-shadow: 10px 10px 3px rgb(0, 112, 112);
@@ -104,7 +119,27 @@ body {
     box-shadow: 10px 10px 3px rgb(0, 112, 112);
   }
 }
-/*
+/*No more unique hovers*/
+
+/*Test items below, remove in final version*/
+.form-test::before {
+  content: "\2713";
+  font-size: 2rem;
+}
+.button-test {
+  font-size: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+.button-test:hover {
+  transform: scale(1.5);
+}
+.animation {
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  animation: test 4s infinite;
+}
+
 @keyframes test {
   0% {
     left: 50%;
@@ -131,23 +166,4 @@ body {
     bottom: 10%;
     background-color: purple;
   }
-.anim-pg-load {
 }
-#anim-pg-load-img {
-  display: flex;
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  animation: pg-load 4s 1;
-}
-@keyframes pg-load {
-  0% {
-    right: 0%;
-    bottom: 0%;
-  }
-  100% {
-    left: -100%;
-    top: -100%;
-  }
-}
-*/
