@@ -15,16 +15,19 @@ body {
   text-align: center;
   background-color: rgb(0, 202, 202);
   box-shadow: 0px 10px 3px rgb(0, 112, 112);
-  animation: anim-header-pgload 0.75s 1;
+  animation: anim-header-pgload 2s 1;
 }
 @keyframes anim-header-pgload {
   0% {
     font-size: 5rem;
+    color: rgb(0, 112, 112);
   }
   100% {
     font-size: 10rem;
+    color: black;
   }
 }
+/*Gallery display*/
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -33,38 +36,37 @@ body {
 .card {
   width: 25%;
   height: auto;
-  font-size: 4rem;
   background-color: rgb(0, 202, 202);
   border: 3px solid rgb(0, 148, 148);
   box-shadow: 10px 10px 3px rgb(0, 112, 112);
-  text-align: center;
   padding: 1rem;
   margin: 5vw 1rem 5vw 0;
   transition: all 0.3s ease-in-out;
+}
+.card-title {
+  font-size: 3rem;
+  text-align: center;
 }
 #card-img {
   width: 90%;
   margin: 5%;
   height: 80%;
 }
-
+/*Standard hover anims*/
 .card:hover {
   transform: scale(1.1);
 }
 .gallery:hover .card:not(:hover) {
   opacity: 0.8;
 }
-
-/*Unique hovers*/
+/*Unique hover anims*/
 #anim-card-apple:hover {
   background-color: rgb(255, 255, 255);
   transition: all 5s ease-in-out;
 }
-
 #anim-card-banana:hover {
   animation: anim-card-banana 2.5s infinite;
 }
-
 @keyframes anim-card-banana {
   0% {
     transform: rotate(0deg);
@@ -87,21 +89,17 @@ body {
     box-shadow: 10px 10px 3px rgb(0, 112, 112);
   }
 }
-
 #anim-card-tomato:hover {
   box-shadow: -20px -20px 10px rgb(115, 23, 201);
 }
-
 #anim-card-blueberry:hover {
   width: 40%;
   color: blue;
   transition: all 3s ease-in-out;
 }
-
 #anim-card-kiwi:hover {
   animation: anim-card-kiwi 4s infinite;
 }
-
 @keyframes anim-card-kiwi {
   0% {
     box-shadow: 10px 10px 3px rgb(0, 112, 112);
@@ -119,51 +117,28 @@ body {
     box-shadow: 10px 10px 3px rgb(0, 112, 112);
   }
 }
-/*No more unique hovers*/
-
-/*Test items below, remove in final version*/
-.form-test::before {
-  content: "\2713";
-  font-size: 2rem;
-}
-.button-test {
-  font-size: 2rem;
-  transition: all 0.3s ease-in-out;
-}
-.button-test:hover {
-  transform: scale(1.5);
-}
-.animation {
-  height: 2rem;
-  width: 2rem;
-  position: absolute;
-  animation: test 4s infinite;
-}
-
-@keyframes test {
-  0% {
-    left: 50%;
-    bottom: 10%;
-    background-color: red;
+/*Media queries*/
+@media screen and (max-width: 800px) {
+  .card {
+    width: 40%;
   }
-  25% {
-    left: 50%;
-    bottom: 20%;
-    background-color: blue;
+}
+@media screen and (max-width: 600px) {
+  .card {
+    width: 70%;
   }
-  50% {
-    left: 55%;
-    bottom: 20%;
-    background-color: green;
+}
+@media screen and (min-width: 1250px) {
+  .card-title {
+    font-size: 4rem;
   }
-  75% {
-    left: 55%;
-    bottom: 10%;
-    background-color: yellow;
+  .card {
+    width: 20%;
+    padding: 1rem 0rem 2rem 0rem;
   }
-  100% {
-    left: 50%;
-    bottom: 10%;
-    background-color: purple;
+}
+@media screen and (min-width: 1500px) {
+  .card-title {
+    font-size: 5rem;
   }
 }
