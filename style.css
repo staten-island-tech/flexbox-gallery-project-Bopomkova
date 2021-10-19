@@ -132,12 +132,12 @@ body {
     padding: 1rem 0rem 2rem 0rem;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .card {
     width: 40%;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 450px) {
   .card {
     width: 70%;
   }
